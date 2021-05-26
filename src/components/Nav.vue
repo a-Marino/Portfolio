@@ -1,7 +1,7 @@
 <template>
     <div class="nav flex justify-center items-center h-14">
         <div class="space-x-24">
-            <router-link to="/contacto" class='link'>
+            <router-link to="/contact" class='link'>
                 Contacto
             </router-link>
             <router-link to="/" class='link'>

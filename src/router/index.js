@@ -15,6 +15,11 @@ const routes = [
     component: () => import('../views/About.vue')
   },
   {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue')
+  },
+  {
     path: '/github',
     beforeEnter() {window.open('https://github.com/a-Marino', '_blank')}
   },

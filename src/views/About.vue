@@ -2,7 +2,7 @@
 	<div class="about min-h-screen">
 		<Nav/>
 		<div>
-			<h1>hola</h1>
+			<h1>Sobre Mi</h1>
 		</div>
 	</div>
 </template>
