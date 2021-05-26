@@ -17,19 +17,23 @@
 				<br>
 				<textarea name="message" cols="30" rows="5" v-model="message" required placeholder="Tu Mensaje"></textarea>
 			</div>
+			<div class="flex justify-center flex-row items-center oculto" id="divMsg">
+				<img src="@/assets/images/checked.png" class="w-7 mr-3">
+				<p>Su mensaje ha sido enviado correctamente</p>
+			</div>
 			<div>
-				<input type="submit" value="Enviar">
+				<input type="submit" value="Enviar" id="btnSubmit">
 			</div>
 		</form>
 		<div class="redes absolute bottom-0 right-0">
             <div class="flex space-x-4 p-4">
-                <router-link to='/instagram'>
+                <router-link to='/instagram' class="red-social">
                     <img src="@/assets/images/instagram.png" class="w-8">
                 </router-link>
-                <router-link to='/github'>
+                <router-link to='/github' class="red-social">
                     <img src="@/assets/images/github.png" class="w-8">
                 </router-link>
-                <router-link to='/linkedin'>
+                <router-link to='/linkedin' class="red-social">
                     <img src="@/assets/images/linkedin.png" class="w-8">
                 </router-link>
             </div>
@@ -60,11 +64,25 @@ export default {
     			{
     				name: this.name,
     				email: this.email,
-    				message: this.message
+    				message: this.message,
     			})
     		} catch(error) {
     			console.log({error});
     		}
+    		let divMsg = document.querySelector('#divMsg')
+    		let btnSubmit = document.querySelector('#btnSubmit')
+    		// Funcion para mostrar el DIV
+    		const quitarClase = () => {
+    			divMsg.classList.remove('oculto');
+    		}
+    		// Funcion para ocultar el DIV
+    		const agregarClase = () => {
+    			divMsg.classList.add('oculto');
+    		}
+    		// Muestra el DIV
+    		quitarClase();
+    		// Lo oculta en 7 segundos
+    		setTimeout(agregarClase, 7000);
     		// Resetar campos
     		this.name = ''
     		this.email = ''
@@ -94,10 +112,16 @@ export default {
 		margin-top: 5px;
 		padding: 5px;
 		outline: none;
-		border: 3px solid #D8B222;
+		border: 1px solid #D8B222;
 		border-radius: 5px;
 		color: black;
 		width: 50%;
+		transition: .2s
+	}
+
+	input:focus, textarea:focus {
+		border: 3px solid #D8B222;
+		transition: .2s
 	}
 
 	input[type=submit] {
@@ -109,7 +133,11 @@ export default {
 	}
 
 	input[type=submit]:hover {
-		transform: scale(1.1);
+		transform: scale(1.02);
 		transition: .2s;
+	}
+
+	.oculto {
+		display: none;
 	}
 </style>
