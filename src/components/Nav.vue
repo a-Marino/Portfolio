@@ -1,15 +1,15 @@
 <template>
     <div class="nav flex justify-center items-center h-14">
         <div class="space-x-24">
-        <router-link to="/contacto" class='link'>
-            Contacto
-        </router-link>
-        <router-link to="/" class='link'>
-            Inicio
-        </router-link>
-        <router-link to='/about' class='link'>
-            Sobre mi
-        </router-link>
+            <router-link to="/contacto" class='link'>
+                Contacto
+            </router-link>
+            <router-link to="/" class='link'>
+                Inicio
+            </router-link>
+            <router-link to='/about' class='link'>
+                Sobre mi
+            </router-link>
         </div>
     </div>
 </template>
@@ -28,23 +28,22 @@ export default {
         box-shadow: 0 5px 10px 10px #1a1a1a;
     }
 
-    .nav a {
+    .link {
         color: #707070;
         font-size: 20px;
         transition: .2s;
     }
 
-    .nav a.router-link-exact-active {
+    a.router-link-exact-active {
         font-size: 28px;
     }
 
-    .nav a.router-link-active:hover {
-        transform: scale(1);
-    }
-
-    .nav a:hover {
+    .link:hover {
+        color: #B7B7B7;
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
         transform: scale(1.2);
         transition: .3s;
-        color: #B7B7B7;
     }
 </style>

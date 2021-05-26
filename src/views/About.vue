@@ -1,8 +1,10 @@
 <template>
-    <div>
-        <Nav/>
-        <h1>Sobre mi</h1>
-    </div> 
+	<div class="about min-h-screen">
+		<Nav/>
+		<div>
+			<h1>hola</h1>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -15,3 +17,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+	.about {
+		background-color: #0C0B09;
+		color: #fff;
+	}
+</style>
