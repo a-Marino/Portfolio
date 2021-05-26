@@ -7,16 +7,24 @@ const routes = [
   {
     path: '/',
     name: 'Index',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Index.vue')
+    component: () => import('../views/Index.vue')
   },
   {
-    path: '/vacunate',
-    beforeEnter() { location.href = 'https://vacunatepba.gba.gob.ar/' }
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/About.vue')
   },
   {
-    path: '/vacunas',
-    name: 'Vacunas',
-    component: () => import('../views/Vacunas.vue')
+    path: '/github',
+    beforeEnter() {window.open('https://github.com/a-Marino', '_blank')}
+  },
+  {
+    path: '/instagram',
+    beforeEnter() {window.open('https://www.instagram.com/andresmarino_/', '_blank')}
+  },
+  {
+    path: '/linkedin',
+    beforeEnter() {window.open('https://www.linkedin.com/in/andr%C3%A9s-marino-16ab14202/', '_blank')}
   }
 ]
 
