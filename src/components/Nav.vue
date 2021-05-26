@@ -1,5 +1,5 @@
 <template>
-    <div class="nav flex justify-center items-center h-14 space-x-24">
+    <div class="nav flex justify-center items-center h-14 space-x-24 md:flex-shrink-0">
         <router-link to="/contact" class='link'>
             Contacto
         </router-link>
@@ -34,10 +34,12 @@ export default {
 
     a.router-link-exact-active {
         transform: scale(1.5);
+        color: #D8B222;
     }
 
     a.router-link-exact-active:hover {
         transform: scale(1.5);
+        color: #D8B222;
     }
 
     .link:hover {

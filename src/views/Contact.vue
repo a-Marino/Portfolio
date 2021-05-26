@@ -1,21 +1,14 @@
 <template>
 	<div class="contact min-h-screen">
 		<Nav/>
-		<form class="form flex flex-col space-y-5" @submit.prevent="sendEmail">
-			<div>
-				<label for="=nombre">Nombre:</label>
-				<br>
-				<input type="text" v-model="name" name="name" required placeholder="Tu Nombre">
+		<h1 class="text-5xl text-center mt-14">Contactame</h1>
+		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail">
+			<div class="space-x-4">
+				<input type="text" v-model="name" name="name" required placeholder="Tu Nombre" class="w-1/4">
+				<input type="email" v-model="email" name="email" required placeholder="Tu Email" class="w-1/4">
 			</div>
 			<div>
-				<label for="email">Email:</label>
-				<br>
-				<input type="email" v-model="email" name="email" required placeholder="Tu Email">
-			</div>
-			<div>
-				<label for="Mensaje">Mensaje:</label>
-				<br>
-				<textarea name="message" cols="30" rows="5" v-model="message" required placeholder="Tu Mensaje"></textarea>
+				<textarea class="w-1/2" name="message" cols="30" rows="7" v-model="message" required placeholder="Tu Mensaje"></textarea>
 			</div>
 			<div class="flex justify-center flex-row items-center oculto" id="divMsg">
 				<img src="@/assets/images/checked.png" class="w-7 mr-3">
@@ -25,30 +18,20 @@
 				<input type="submit" value="Enviar" id="btnSubmit">
 			</div>
 		</form>
-		<div class="redes absolute bottom-0 right-0">
-            <div class="flex space-x-4 p-4">
-                <router-link to='/instagram' class="red-social">
-                    <img src="@/assets/images/instagram.png" class="w-8">
-                </router-link>
-                <router-link to='/github' class="red-social">
-                    <img src="@/assets/images/github.png" class="w-8">
-                </router-link>
-                <router-link to='/linkedin' class="red-social">
-                    <img src="@/assets/images/linkedin.png" class="w-8">
-                </router-link>
-            </div>
-        </div>
+		<Redes/>
 	</div>
 </template>
 
 <script>
-import Nav from "@/components/Nav.vue"
+import Nav from '@/components/Nav.vue'
+import Redes from '@/components/Redes.vue'
 import emailjs from 'emailjs-com'
 
 export default {
     name: 'Contact',
     components: {
         Nav,
+        Redes,
     },
     data() {
     	return {
@@ -60,6 +43,7 @@ export default {
     methods: {
     	sendEmail(e) {
     		try {
+    			// Service ID - Template ID - User ID
     			emailjs.sendForm('service_xdl5dyd', 'template_5enry9j', e.target, 'user_nT1iOdL42gmrzj1lnYOKP',
     			{
     				name: this.name,
@@ -104,24 +88,32 @@ export default {
 		margin-top: 60px;
 	}
 
-	label {
-		font-size: 20px;
+	h1 {
+		color: #D8B222;
+		cursor: default;
 	}
 
 	input, textarea {
 		margin-top: 5px;
 		padding: 5px;
 		outline: none;
-		border: 1px solid #D8B222;
-		border-radius: 5px;
-		color: black;
-		width: 50%;
-		transition: .2s
+		color: white;
+		transition: .2s;
+		background-color: transparent;
+		border-bottom: 3px solid rgba(128,128,128,0.5);
+		resize: none;
 	}
 
 	input:focus, textarea:focus {
-		border: 3px solid #D8B222;
-		transition: .2s
+		border-bottom: 3px solid #D8B222;
+		transition: .2s;
+		transform: scale(1.01);
+	}
+
+	input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+		color: rgba(128,128,128,0.5);
+		padding: 10px;
+		transition: .2s;
 	}
 
 	input[type=submit] {
@@ -133,7 +125,7 @@ export default {
 	}
 
 	input[type=submit]:hover {
-		transform: scale(1.02);
+		transform: scale(1.1);
 		transition: .2s;
 	}
 

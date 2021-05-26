@@ -24,15 +24,4 @@ export default {
   box-sizing: border-box;
   font-family: 'Barlow', sans-serif;
 }
-
-.red-social {
-  opacity: 0.5;
-  transition: .1s;
-}
-
-.red-social:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  transition: .1s;
-}
 </style>
