@@ -25,6 +25,7 @@
 <script>
 import Nav from '@/components/Nav.vue'
 import Redes from '@/components/Redes.vue'
+//Libreria para el formulario de contactos 
 import emailjs from 'emailjs-com'
 
 export default {
@@ -66,7 +67,7 @@ export default {
     		// Muestra el DIV
     		quitarClase();
     		// Lo oculta en 7 segundos
-    		setTimeout(agregarClase, 7000);
+    		setTimeout(agregarClase, 10000);
     		// Resetar campos
     		this.name = ''
     		this.email = ''

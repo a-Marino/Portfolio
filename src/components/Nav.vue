@@ -30,6 +30,7 @@ export default {
         color: #707070;
         font-size: 20px;
         transition: .2s;
+        margin-top: 7px;
     }
 
     a.router-link-exact-active {
