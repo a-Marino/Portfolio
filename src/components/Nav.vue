@@ -20,10 +20,10 @@ export default {
 
 <style scoped>
     .nav {
-        background-color: #1a1a1a;
+        background-color: #1a1a1aE6;
         color: white;
         overflow: hidden;
-        box-shadow: 0 5px 10px 10px #1a1a1a;
+        box-shadow: 0 5px 10px 10px #1a1a1aE6;
     }
 
     .link {

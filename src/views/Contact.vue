@@ -2,7 +2,7 @@
 	<div class="contact min-h-screen">
 		<Nav/>
 		<h1 class="text-5xl text-center mt-14">Contactame</h1>
-		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail">
+		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail" autocomplete="off">
 			<div class="space-x-4">
 				<input type="text" v-model="name" name="name" required placeholder="Tu Nombre" class="w-1/4">
 				<input type="email" v-model="email" name="email" required placeholder="Tu Email" class="w-1/4">
@@ -79,6 +79,10 @@ export default {
 <style scoped>
 	.contact {
 		background-color: #0C0B09;
+		background-image: url('../assets/images/fondo-1.jpg');
+        background-repeat: no-repeat;
+        background-position-y: 30%;
+        background-size: cover;
 		color: #fff;
 	}
 
@@ -118,14 +122,17 @@ export default {
 
 	input[type=submit] {
 		padding: 5px 15px;
-		border: none;
-		background-color: #D8B222;
+		border: 2px solid #D8B222;
+		background-color: transparent;
 		cursor: pointer;
 		transition: .2s;
+		color: #D8B222;
 	}
 
 	input[type=submit]:hover {
 		transform: scale(1.1);
+		background-color: #D8B222;
+		color: black;
 		transition: .2s;
 	}
 
