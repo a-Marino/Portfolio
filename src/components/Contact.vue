@@ -1,7 +1,6 @@
 <template>
 	<div class="contact min-h-screen">
-		<Nav/>
-		<h1 class="text-5xl text-center mt-14">Contactame</h1>
+		<h1 class="text-5xl text-center mt-36">Contactame</h1>
 		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail" autocomplete="off">
 			<div class="space-x-4">
 				<input type="text" v-model="name" name="name" required placeholder="Tu Nombre" class="w-1/4">
@@ -18,7 +17,6 @@
 				<input type="submit" value="Enviar" id="btnSubmit">
 			</div>
 		</form>
-		<Redes/>
 	</div>
 </template>
 
@@ -80,10 +78,6 @@ export default {
 <style scoped>
 	.contact {
 		background-color: #0C0B09;
-		background-image: url('../assets/images/fondo-1.jpg');
-        background-repeat: no-repeat;
-        background-position-y: 30%;
-        background-size: cover;
 		color: #fff;
 	}
 

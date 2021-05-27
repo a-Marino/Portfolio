@@ -1,5 +1,5 @@
 <template>
-    <div class="nav flex justify-center items-center h-14 space-x-24 md:flex-shrink-0">
+    <div class="nav flex justify-center items-center h-14 space-x-24 z-0">
         <router-link to="/contact" class='link'>
             Contacto
         </router-link>
@@ -30,7 +30,8 @@ export default {
         color: #707070;
         font-size: 20px;
         transition: .2s;
-        margin-top: 7px;
+        margin-top: 15px;
+        margin-bottom: 13px;
     }
 
     a.router-link-exact-active {

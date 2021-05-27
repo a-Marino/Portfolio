@@ -1,4 +1,4 @@
-<template>
+<template>	
 	<div class="redes absolute bottom-0 right-0">
         <div class="flex space-x-4 p-4">
             <router-link to='/instagram' class="red-social">
