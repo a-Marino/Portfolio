@@ -1,5 +1,5 @@
 <template>
-    <div class="nav flex justify-center items-center h-14 space-x-24 z-0">
+    <div class="nav flex lg:flex-row md:flex-row flex-col justify-center items-center h-14 lg:space-x-24 md:space-x-24 space-y-5 lg:pb-0 pb-5">
         <router-link to="#" v-scroll-to="'#contact'" class='link'>
             Contacto
         </router-link>
@@ -23,7 +23,6 @@ export default {
         background-color: #1a1a1aE6;
         color: white;
         overflow: hidden;
-        box-shadow: 0 5px 10px 10px #1a1a1aE6;
     }
 
     .link {

@@ -1,6 +1,5 @@
 <template>
     <div>
-    <v-content>
         <Nav/>
         <div class="min-h-screen" id="index">
             <div class="flex justify-center">
@@ -9,7 +8,6 @@
         </div>
         <About id='about'/>
         <Contact id='contact'/>
-    </v-content>
     </div> 
 </template>
 

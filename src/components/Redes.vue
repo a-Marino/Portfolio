@@ -1,5 +1,5 @@
 <template>	
-	<div class="redes float-right">
+	<div class="redes lg:float-right md:float-right flex justify-center">
         <div class="flex space-x-4 p-4">
             <router-link to='/instagram' class="red-social">
                 <img src="@/assets/images/instagram.png" class="w-8">
