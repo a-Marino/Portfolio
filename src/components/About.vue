@@ -1,7 +1,7 @@
 <template>
 	<div class="about min-h-full">
 		<h1 class="text-3xl text-center mb-24">Sobre Mi</h1>
-		<div class="flex justify-center min-w-screen lg:flex-row md:flex-row flex-col mx-auto">
+		<div class="flex justify-center min-w-screen lg:flex-row md:flex-row flex-col mx-auto lg:space-x-10 sm:space-x-0">
 			<div class="lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10">
 				<p>
 				Hola.<br>

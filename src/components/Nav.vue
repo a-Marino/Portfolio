@@ -1,5 +1,5 @@
 <template>
-    <div class="nav flex lg:flex-row md:flex-row flex-col justify-center items-center h-14 lg:space-x-24 md:space-x-24 space-y-5 lg:pb-0 pb-5">
+    <div class="nav flex lg:flex-row md:flex-row flex-col justify-center items-center h-14 lg:space-x-24 md:space-x-24 lg:space-y-0 space-y-5 lg:pb-0 pb-5">
         <router-link to="#" v-scroll-to="'#contact'" class='link'>
             Contacto
         </router-link>
