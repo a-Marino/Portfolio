@@ -1,5 +1,5 @@
 <template>	
-	<div class="redes absolute bottom-0 right-0">
+	<div class="redes float-right">
         <div class="flex space-x-4 p-4">
             <router-link to='/instagram' class="red-social">
                 <img src="@/assets/images/instagram.png" class="w-8">
@@ -21,9 +21,18 @@ export default {
 </script>
 
 <style>
+	.redes {
+		background-color: transparent;
+	}
+
 	.red-social {
 	  opacity: 0.5;
 	  transition: .1s;
+	  background-color: transparent;
+	}
+
+	img {
+		background-color: transparent;
 	}
 
 	.red-social:hover {

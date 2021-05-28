@@ -1,12 +1,12 @@
 <template>
     <div class="nav flex justify-center items-center h-14 space-x-24 z-0">
-        <router-link to="/contact" class='link'>
+        <router-link to="#" v-scroll-to="'#contact'" class='link'>
             Contacto
         </router-link>
-        <router-link to="/" class='link'>
+        <router-link to="#" class='link index'>
             Inicio
         </router-link>
-        <router-link to='/about' class='link'>
+        <router-link to='#' v-scroll-to="'#about'" class='link'>
             Sobre mi
         </router-link>
     </div>
@@ -32,24 +32,20 @@ export default {
         transition: .2s;
         margin-top: 15px;
         margin-bottom: 13px;
+        background-color: transparent;
     }
 
-    a.router-link-exact-active {
-        transform: scale(1.5);
-        color: #D8B222;
-    }
-
-    a.router-link-exact-active:hover {
-        transform: scale(1.5);
-        color: #D8B222;
+    .index {
+        transform: scale(1.3);
     }
 
     .link:hover {
         color: #B7B7B7;
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2);
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3);
         transition: .3s;
     }
+
 </style>

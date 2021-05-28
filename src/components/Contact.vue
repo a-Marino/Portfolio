@@ -1,6 +1,7 @@
 <template>
-	<div class="contact min-h-screen">
+	<div class="contact min-h-full mb-32">
 		<h1 class="text-5xl text-center mt-36">Contactame</h1>
+		<p class="email text-center mt-4">andresmarino.contacto@gmail.com</p>
 		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail" autocomplete="off">
 			<div class="space-x-4">
 				<input type="text" v-model="name" name="name" required placeholder="Tu Nombre" class="w-1/4">
@@ -22,7 +23,6 @@
 
 <script>
 import Nav from '@/components/Nav.vue'
-import Redes from '@/components/Redes.vue'
 //Libreria para el formulario de contactos 
 import emailjs from 'emailjs-com'
 
@@ -30,7 +30,6 @@ export default {
     name: 'Contact',
     components: {
         Nav,
-        Redes,
     },
     data() {
     	return {
@@ -133,5 +132,10 @@ export default {
 
 	.oculto {
 		display: none;
+	}
+
+	.email{
+		color: rgba(128,128,128,0.5);
+		cursor: default;
 	}
 </style>

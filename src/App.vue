@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <div class="relative min-h-screen flex m-0 p-0">
-      <!-- CONTENIDO  -->
-      <div class="flex-1">
-        <router-view/>
-      </div>
-    </div>
+      <router-view/>
+      <Redes/>
   </div>
 </template>
 
 <script>
+import Redes from '@/components/Redes.vue'
+
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    Redes,
+  }
 }
 </script>
 
@@ -19,6 +20,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,500;0,700;1,100;1,600&display=swap');
 
 * {
+  background-color: #0C0B09;
   padding: 0;
   margin: 0;
   box-sizing: border-box;

@@ -1,8 +1,8 @@
 <template>
 	<div class="about min-h-full">
-		<h1 class="text-3xl ml-16">Sobre Mi</h1>
-		<div class="flex">
-			<div class="w-1/4 ml-24 mt-10 space-y-5">
+		<h1 class="text-3xl text-center mb-24">Sobre Mi</h1>
+		<div class="flex justify-center">
+			<div class="w-1/4 ml-24 mt-10 space-y-5 text-center">
 				<p>
 				Hola.<br>
 				Soy Andrés Marino. Tengo 20 años, y vivo en la ciudad de Coronel Suarez, Provincia de Buenos Aires, Argentina.
@@ -11,19 +11,16 @@
 			</div>
 			<img src="@/assets/images/andresmarino.png" class="h-xl cara">
 		</div>
-		<Redes/>
 	</div>
 </template>
 
 <script>
 import Nav from "@/components/Nav.vue"
-import Redes from "@/components/Redes.vue"
 
 export default {
     name: 'About',
     components: {
         Nav,
-        Redes,
     }
 }
 </script>
