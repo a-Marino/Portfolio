@@ -1,5 +1,5 @@
 <template>
-	<div class="about min-h-full">
+	<div class="about min-h-full"  v-scrollanimation>
 		<h1 class="text-3xl text-center lg:mb-24">Sobre Mi</h1>
 		<div class="flex justify-center min-w-screen lg:flex-row md:flex-row flex-col mx-auto lg:space-x-10 sm:space-x-0">
 			<div class="lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10">
@@ -16,7 +16,7 @@
 						<li>HTML y CSS</li>
 						<li>Bootstrap y TailwindCSS</li>
 						<li>PHP y Laravel</li>
-						<li>JavaScript, y un poco de VueJS</li>
+						<li>JavaScript y VueJS</li>
 						<li>PosgresSQL y phpMyAdmin</li>
 						<li>Ingles avanzado</li>
 					</ul>
@@ -58,4 +58,14 @@ export default {
 		color: #dbb62e;
 	}
 
+	.before-enter {
+		opacity: 0;
+		transform: translateX(100px);
+		transition: all 2s ease-out;
+	}
+
+	.enter {
+		opacity: 1;
+		transform: translateX(0px);
+	}
 </style>

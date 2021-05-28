@@ -2,8 +2,8 @@
     <div>
         <Nav/>
         <div class="min-h-screen" id="index">
-            <div class="flex justify-center">
-                <img src="@/assets/images/IMG_20200323_032556_293.jpg" class="imagen mt-32">  
+            <div class="flex justify-center divImg">
+                <img src="@/assets/images/IMG_20200323_032556_293.png" class="imagen mt-32 animate__animated animate__bounceIn">  
             </div>
         </div>
         <About id='about'/>
@@ -22,12 +22,22 @@ export default {
         Nav,
         About,
         Contact
-    }
+    },
 }
 </script>
 
 <style scoped>
     *{
         background-color: #0C0B09;
+    }
+
+    .divImg {
+        overflow: hidden;
+    }
+
+    .imagen {
+        background-color: transparent;
+        animation-duration: 2s;
+        animation-delay: .5s;
     }
 </style>

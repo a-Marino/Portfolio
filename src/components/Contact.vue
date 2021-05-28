@@ -1,6 +1,6 @@
 <template>
-	<div class="contact min-h-full mb-32">
-		<h1 class="text-5xl text-center mt-36 amarillo">Contactame</h1>
+	<div class="contact min-h-full mb-32" v-scrollanimation>
+		<h1 class="text-5xl text-center mt-40 amarillo">Contactame</h1>
 		<p class="email text-center mt-4">andresmarino.contacto@gmail.com</p>
 		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail" autocomplete="off">
 			<div class="space-x-4">
@@ -14,7 +14,7 @@
 				<img src="@/assets/images/checked.png" class="w-7 mr-3">
 				<p class="amarillo">Su mensaje ha sido enviado correctamente</p>
 			</div>
-			<div>
+			<div class="divBoton">
 				<input type="submit" value="Enviar" id="btnSubmit">
 			</div>
 		</form>
@@ -76,6 +76,10 @@ export default {
 		color: #fff;
 	}
 
+	.divBoton {
+		overflow: hidden;
+	}
+
 	.form {
 		text-align: center;
 		margin: auto;
@@ -87,6 +91,10 @@ export default {
 		cursor: default;
 	}
 
+	h1 {
+		overflow: hidden;
+	}
+
 	input, textarea {
 		margin-top: 5px;
 		padding: 5px;
@@ -96,6 +104,7 @@ export default {
 		background-color: transparent;
 		border-bottom: 3px solid rgba(128,128,128,0.5);
 		resize: none;
+		overflow: hidden;
 	}
 
 	input:focus, textarea:focus {
@@ -133,5 +142,18 @@ export default {
 	.email{
 		color: rgba(128,128,128,0.5);
 		cursor: default;
+	}
+
+	.before-enter {
+		opacity: 0;
+		transform: translateX(-100px);
+		transition: all 2s ease-out;
+		overflow: hidden;
+	}
+
+	.enter {
+		opacity: 1;
+		transform: translateX(0px);
+		overflow: hidden;
 	}
 </style>

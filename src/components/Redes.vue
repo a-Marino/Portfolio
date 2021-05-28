@@ -1,5 +1,5 @@
 <template>	
-	<div class="redes lg:float-right md:float-right flex justify-center">
+	<div class="redes lg:float-right md:float-right flex justify-center"  v-scrollanimation>
         <div class="flex space-x-4 p-4">
             <router-link to='/instagram' class="red-social">
                 <img src="@/assets/images/instagram.png" class="w-8">
@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 	.redes {
 		background-color: transparent;
 	}
@@ -39,5 +39,16 @@ export default {
 	  opacity: 1;
 	  transform: scale(1.1);
 	  transition: .1s;
+	}
+
+	.before-enter {
+		opacity: 0;
+		transform: translateY(-100px);
+		transition: all 2s ease-out;
+	}
+
+	.enter {
+		opacity: 1;
+		transform: translateY(0px);
 	}
 </style>

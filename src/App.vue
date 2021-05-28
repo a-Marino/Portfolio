@@ -25,5 +25,18 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Barlow', sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               
+}
+
+body::-webkit-scrollbar-track {
+  background: #0C0B09;       
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #dbb62e;    
 }
 </style>

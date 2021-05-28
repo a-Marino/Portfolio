@@ -3,6 +3,10 @@ import App from './App.vue'
 import '@/assets/css/tailwind.css'
 import router from './router'
 import VueScrollTo from 'vue-scrollto'
+import 'animate.css'
+import ScrollAnimation from './directives/scrollanimation'
+
+Vue.directive('scrollanimation', ScrollAnimation)
 
 Vue.use(VueScrollTo)
 
