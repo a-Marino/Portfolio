@@ -22,15 +22,11 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue'
 //Libreria para el formulario de contactos 
 import emailjs from 'emailjs-com'
 
 export default {
     name: 'Contact',
-    components: {
-        Nav,
-    },
     data() {
     	return {
     		name: '',
