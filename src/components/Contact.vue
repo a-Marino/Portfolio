@@ -1,6 +1,6 @@
 <template>
 	<div class="contact min-h-full mb-32">
-		<h1 class="text-5xl text-center mt-36">Contactame</h1>
+		<h1 class="text-5xl text-center mt-36 amarillo">Contactame</h1>
 		<p class="email text-center mt-4">andresmarino.contacto@gmail.com</p>
 		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail" autocomplete="off">
 			<div class="space-x-4">
@@ -12,7 +12,7 @@
 			</div>
 			<div class="flex justify-center flex-row items-center oculto" id="divMsg">
 				<img src="@/assets/images/checked.png" class="w-7 mr-3">
-				<p>Su mensaje ha sido enviado correctamente</p>
+				<p class="amarillo">Su mensaje ha sido enviado correctamente</p>
 			</div>
 			<div>
 				<input type="submit" value="Enviar" id="btnSubmit">
@@ -82,7 +82,7 @@ export default {
 		margin-top: 60px;
 	}
 
-	h1 {
+	.amarillo {
 		color: #D8B222;
 		cursor: default;
 	}
