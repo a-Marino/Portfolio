@@ -1,14 +1,15 @@
 <template>
 	<div class="about min-h-full"  v-scrollanimation>
-		<h1 class="text-3xl text-center lg:mb-24">Sobre Mi</h1>
+		<h1 class="text-3xl text-center mb-5">Sobre Mi</h1>
+		<button class="block mx-auto lg:mb-24 englishBtn text-sm" v-on:click='ocultar' id="btnIdioma">English</button>
 		<div class="flex justify-center min-w-screen lg:flex-row md:flex-row flex-col mx-auto lg:space-x-10 sm:space-x-0">
-			<div class="lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10">
+			<div class="lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10" id="spanish">
 				<p>
 					<span class="text-xl font-semibold tracking-wide amarillo">Hola.</span> <br>
 					Soy Andrés Marino. Tengo 20 años, y vivo en la ciudad de Coronel Suarez, Provincia de Buenos Aires, Argentina.
 				</p>
 				<p>
-					En este momento estoy cursando el tercer y ultimo año de la Tecnicatura Diseño de Aplicaciones Web, en la Universidad de la <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold">UPSO</a>. <br>
+					En este momento estoy cursando el tercer y ultimo año de la Tecnicatura Diseño de Aplicaciones Web, en la Universidad <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold">UPSO</a>. <br>
 				</p>
 				<p>
 					<span class="amarillo text-lg font-semibold">Conocimientos:</span> <br>
@@ -18,7 +19,27 @@
 						<li>PHP y Laravel</li>
 						<li>JavaScript y VueJS</li>
 						<li>PosgresSQL y phpMyAdmin</li>
-						<li>Ingles avanzado</li>
+						<li>Ingles</li>
+					</ul>
+				</p>
+			</div>
+			<div class="oculto-2 lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10" id="english">
+				<p>
+					<span class="text-xl font-semibold tracking-wide amarillo">Hi.</span> <br>
+					Im Andrés Marino. I am 20 years old, i live in Coronel Suarez, Province of Buenos Aires, Argentina.
+				</p>
+				<p>
+					At the moment i am studying the third and last year of Technical degree in Web Application Design, in <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold">UPSO</a> University. <br>
+				</p>
+				<p>
+					<span class="amarillo text-lg font-semibold">Knowledge:</span> <br>
+					<ul>
+						<li>HTML y CSS</li>
+						<li>Bootstrap y TailwindCSS</li>
+						<li>PHP y Laravel</li>
+						<li>JavaScript y VueJS</li>
+						<li>PosgresSQL y phpMyAdmin</li>
+						<li>English</li>
 					</ul>
 				</p>
 			</div>
@@ -32,10 +53,47 @@
 <script>
 export default {
     name: 'About',
+    methods: {
+    	ocultar: function() {
+    		const divSpanish = document.querySelector('#spanish');
+    		const divEnglish = document.querySelector('#english');
+    		const btnIdioma = document.querySelector('#btnIdioma');
+
+    		divSpanish.classList.toggle('oculto-2');
+    		divEnglish.classList.toggle('oculto-2');
+
+    		if (divSpanish.classList.contains('oculto-2')) {
+    			btnIdioma.innerHTML = 'Spanish';
+    		} else if (divEnglish.classList.contains('oculto-2')) {
+    			btnIdioma.innerHTML = 'Ingles';
+    		}
+    	}
+    }
 }
 </script>
 
 <style scoped>
+	.oculto-2 {
+		display: none;
+	}
+
+	.englishBtn {
+		padding: 3px 10px;
+		border: 2px solid #D8B222;
+		background-color: transparent;
+		cursor: pointer;
+		transition: .2s;
+		color: #D8B222;
+		outline: none;
+	}
+
+	.englishBtn:hover {
+		transform: scale(1.1);
+		background-color: #D8B222;
+		color: black;
+		transition: .2s;
+	}
+
 	.about {
 		background-color: #0C0B09;
 		color: #fff;
