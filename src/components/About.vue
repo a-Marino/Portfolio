@@ -1,6 +1,6 @@
 <template>
 	<div class="about min-h-full"  v-scrollanimation>
-		<h1 class="text-3xl text-center mb-5">Sobre Mi</h1>
+		<h1 class="text-3xl text-center mb-5 overflow-hidden">Sobre Mi</h1>
 		<button class="block mx-auto lg:mb-24 englishBtn text-sm" v-on:click='ocultar' id="btnIdioma">English</button>
 		<div class="flex justify-center min-w-screen lg:flex-row md:flex-row flex-col mx-auto lg:space-x-10 sm:space-x-0">
 			<div class="lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10" id="spanish">
@@ -73,6 +73,12 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+	
+	p, span, ul, li {
+		font-family: 'Source Code Pro', monospace;
+	}
+
 	.oculto-2 {
 		display: none;
 	}
@@ -97,6 +103,7 @@ export default {
 	.about {
 		background-color: #0C0B09;
 		color: #fff;
+		overflow: hidden;
 	}
 
 	h1 {
