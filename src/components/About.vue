@@ -9,7 +9,7 @@
 					Soy Andrés Marino. Tengo 20 años, y vivo en la ciudad de Coronel Suarez, Provincia de Buenos Aires, Argentina.
 				</p>
 				<p>
-					En este momento estoy cursando el tercer y ultimo año de la Tecnicatura Diseño de Aplicaciones Web, en la Universidad <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold">UPSO</a>. <br>
+					En este momento estoy cursando el tercer y ultimo año de la Tecnicatura Diseño de Aplicaciones Web, en la Universidad <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold fuente-source">UPSO</a>. <br>
 				</p>
 				<p>
 					<span class="amarillo text-lg font-semibold">Conocimientos:</span> <br>
@@ -75,7 +75,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
 	
-	p, span, ul, li {
+	p, span, ul, li, .fuente-source {
 		font-family: 'Source Code Pro', monospace;
 	}
 
