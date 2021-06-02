@@ -71,11 +71,6 @@ export default {
 </script>
 
 <style scoped>
-	.contact {
-		background-color: #0C0B09;
-		color: #fff;
-	}
-
 	.divBoton {
 		overflow: hidden;
 	}
@@ -87,7 +82,7 @@ export default {
 	}
 
 	.amarillo {
-		color: #D8B222;
+		color: var(--amarillo);
 		cursor: default;
 	}
 
@@ -99,7 +94,7 @@ export default {
 		margin-top: 5px;
 		padding: 5px;
 		outline: none;
-		color: white;
+		color: var(--gris-texto);
 		transition: .2s;
 		background-color: transparent;
 		border-bottom: 3px solid rgba(128,128,128,0.5);
@@ -108,8 +103,9 @@ export default {
 	}
 
 	input:focus, textarea:focus {
-		border-bottom: 3px solid #D8B222;
+		border-bottom: 3px solid var(--amarillo);
 		transition: .2s;
+		color: var(--amarillo);
 		transform: scale(1.01);
 	}
 
@@ -121,16 +117,16 @@ export default {
 
 	input[type=submit] {
 		padding: 5px 15px;
-		border: 2px solid #D8B222;
+		border: 2px solid var(--amarillo);
 		background-color: transparent;
 		cursor: pointer;
 		transition: .2s;
-		color: #D8B222;
+		color: var(--amarillo);
 	}
 
 	input[type=submit]:hover {
 		transform: scale(1.1);
-		background-color: #D8B222;
+		background-color: var(--amarillo);
 		color: black;
 		transition: .2s;
 	}
@@ -143,6 +139,8 @@ export default {
 		color: rgba(128,128,128,0.5);
 		cursor: default;
 	}
+
+	/* scrollAnimation Directive classes */
 
 	.before-enter {
 		opacity: 0;

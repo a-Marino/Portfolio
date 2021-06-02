@@ -26,19 +26,21 @@ export default {
     }
 
     .link {
-        color: #707070;
+        color: var(--gris-texto);
         font-size: 20px;
         transition: .2s;
         margin-top: 15px;
-        background-color: transparent;
     }
 
     .index {
         transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -o-transform: scale(1.3);
     }
 
     .link:hover {
-        color: #D8B222;
+        color: var(--amarillo);
         -webkit-transform: scale(1.3);
         -moz-transform: scale(1.3);
         -o-transform: scale(1.3);

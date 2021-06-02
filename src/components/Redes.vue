@@ -21,18 +21,9 @@ export default {
 </script>
 
 <style scoped>
-	.redes {
-		background-color: transparent;
-	}
-
 	.red-social {
 	  opacity: 0.5;
 	  transition: .1s;
-	  background-color: transparent;
-	}
-
-	img {
-		background-color: transparent;
 	}
 
 	.red-social:hover {
@@ -41,6 +32,8 @@ export default {
 	  transition: .1s;
 	}
 
+	/* scrollAnimation Directive classes */
+	
 	.before-enter {
 		opacity: 0;
 		transform: translateY(-100px);

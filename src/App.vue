@@ -11,16 +11,21 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,500;0,700;1,100;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+/* Variables de colores */
+:root {
+  --amarillo: #DBB62E;
+  --gris-fondo: #0C0B09;
+  --gris-texto: #808080;
+}
+
 * {
-  background-color: #0C0B09;
+  background-color: var(--gris-fondo);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-family: 'Barlow', sans-serif; */
   font-family: 'Gruppo', cursive;
   font-weight: bold;
   overflow-x: hidden;
@@ -40,10 +45,10 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #0C0B09;       
+  background: var(--gris-fondo);       
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #dbb62e;    
+  background-color: var(--amarillo);    
 }
 </style>

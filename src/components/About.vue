@@ -1,7 +1,7 @@
 <template>
 	<div class="about min-h-full"  v-scrollanimation>
 		<h1 class="text-3xl text-center mb-5 overflow-hidden">Sobre Mi</h1>
-		<button class="block mx-auto lg:mb-24 englishBtn text-sm" v-on:click='ocultar' id="btnIdioma">English</button>
+		<button class="block mx-auto lg:mb-24 englishBtn text-sm" @click='changeLanguage' id="btnIdioma">English</button>
 		<div class="flex justify-center min-w-screen lg:flex-row md:flex-row flex-col mx-auto lg:space-x-10 sm:space-x-0">
 			<div class="lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10" id="spanish">
 				<p>
@@ -29,7 +29,7 @@
 					Im Andrés Marino. I am 20 years old, i live in Coronel Suarez, Province of Buenos Aires, Argentina.
 				</p>
 				<p>
-					At the moment i am studying the third and last year of Technical degree in Web Application Design, in <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold">UPSO</a> University. <br>
+					At the moment i am studying the third and last year of Technical degree in Web Application Design, in <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold fuente-source">UPSO</a> University. <br>
 				</p>
 				<p>
 					<span class="amarillo text-lg font-semibold">Knowledge:</span> <br>
@@ -54,7 +54,7 @@
 export default {
     name: 'About',
     methods: {
-    	ocultar: function() {
+    	changeLanguage: function() {
     		const divSpanish = document.querySelector('#spanish');
     		const divEnglish = document.querySelector('#english');
     		const btnIdioma = document.querySelector('#btnIdioma');
@@ -89,25 +89,23 @@ export default {
 		background-color: transparent;
 		cursor: pointer;
 		transition: .2s;
-		color: #D8B222;
+		color: var(--amarillo);
 		outline: none;
 	}
 
 	.englishBtn:hover {
 		transform: scale(1.1);
-		background-color: #D8B222;
+		background-color: var(--amarillo);
 		color: black;
 		transition: .2s;
 	}
 
 	.about {
-		background-color: #0C0B09;
-		color: #fff;
 		overflow: hidden;
 	}
 
 	h1 {
-		color: #dbb62e;
+		color: var(--amarillo);
 	}
 
 	.cara {
@@ -116,13 +114,15 @@ export default {
 	}
 
 	p {
-		color: rgba(128,128,128);
+		color: var(--gris-texto);
 	}
 
 	.amarillo {
-		color: #dbb62e;
+		color: var(--amarillo);
 	}
 
+	/* scrollAnimation Directive classes */
+	
 	.before-enter {
 		opacity: 0;
 		transform: translateX(100px);

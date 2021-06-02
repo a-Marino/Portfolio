@@ -2,8 +2,9 @@
     <div>
         <Nav/>
         <Logo/>
-        <About/>
-        <Contact/>
+        <!-- ID is for scroll-to !-->
+        <About id='about'/>
+        <Contact id='contact'/>
         <Redes/>
     </div> 
 </template>
