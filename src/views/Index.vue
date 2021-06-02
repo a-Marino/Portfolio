@@ -1,27 +1,28 @@
 <template>
     <div>
         <Nav/>
-        <div class="min-h-screen" id="index">
-            <div class="flex justify-center divImg">
-                <img src="@/assets/images/IMG_20200323_032556_293.png" class="imagen lg:mt-32 md:mt-32 mt-48 animate__animated animate__bounceIn">  
-            </div>
-        </div>
-        <About id='about'/>
-        <Contact id='contact'/>
+        <Logo/>
+        <About/>
+        <Contact/>
+        <Redes/>
     </div> 
 </template>
 
 <script>
 import Nav from "@/components/Nav.vue"
+import Logo from "@/components/Logo.vue"
 import About from '@/components/About.vue'
 import Contact from '@/components/Contact.vue'
+import Redes from '@/components/Redes.vue'
 
 export default {
     name: 'Index',
     components: {
         Nav,
+        Logo,
         About,
-        Contact
+        Contact,
+        Redes
     },
 }
 </script>
@@ -29,15 +30,5 @@ export default {
 <style scoped>
     *{
         background-color: #0C0B09;
-    }
-
-    .divImg {
-        overflow: hidden;
-    }
-
-    .imagen {
-        background-color: transparent;
-        animation-duration: 2s;
-        animation-delay: .5s;
     }
 </style>

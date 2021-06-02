@@ -1,18 +1,12 @@
 <template>
   <div id="app">
       <router-view/>
-      <Redes/>
   </div>
 </template>
 
 <script>
-import Redes from '@/components/Redes.vue'
-
 export default {
   name: "App",
-  components: {
-    Redes,
-  }
 }
 </script>
 
@@ -30,6 +24,11 @@ export default {
   font-family: 'Gruppo', cursive;
   font-weight: bold;
   overflow-x: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
 h1 {
