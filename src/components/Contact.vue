@@ -71,6 +71,10 @@ export default {
 </script>
 
 <style scoped>
+	.contact {
+		background-color: transparent;
+	}
+
 	.divBoton {
 		overflow: hidden;
 	}

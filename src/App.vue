@@ -22,18 +22,18 @@ export default {
 }
 
 * {
-  background-color: var(--gris-fondo);
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  overflow-x: hidden;
   font-family: 'Gruppo', cursive;
   font-weight: bold;
-  overflow-x: hidden;
 }
 
 body {
   height: 100vh;
   width: 100vw;
+  background-color: var(--gris-fondo);
+  box-sizing: border-box;
 }
 
 h1 {

@@ -1,7 +1,7 @@
 <template>
 	<div class="about min-h-full"  v-scrollanimation>
 		<h1 class="text-3xl text-center mb-5 overflow-hidden">Sobre Mi</h1>
-		<button class="block mx-auto lg:mb-24 englishBtn text-sm" @click='changeLanguage' id="btnIdioma">English</button>
+		<button class="block mx-auto lg:mb-24 btn text-sm" @click='changeLanguage' id="btnIdioma">English</button>
 		<div class="flex justify-center min-w-screen lg:flex-row md:flex-row flex-col mx-auto lg:space-x-10 sm:space-x-0">
 			<div class="lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10" id="spanish">
 				<p>
@@ -83,7 +83,7 @@ export default {
 		display: none;
 	}
 
-	.englishBtn {
+	.btn {
 		padding: 3px 10px;
 		border: 2px solid #D8B222;
 		background-color: transparent;
@@ -93,7 +93,7 @@ export default {
 		outline: none;
 	}
 
-	.englishBtn:hover {
+	.btn:hover {
 		transform: scale(1.1);
 		background-color: var(--amarillo);
 		color: black;
@@ -102,6 +102,7 @@ export default {
 
 	.about {
 		overflow: hidden;
+		background-color: transparent;
 	}
 
 	h1 {

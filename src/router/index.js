@@ -6,8 +6,11 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Index',
     component: () => import('../views/Index.vue')
+  },
+  {
+    path: '/proyectos',
+    component: () => import('../views/Proyectos.vue')
   },
   {
     path: '/github',
@@ -26,7 +29,15 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return { x: 0, y: 0 }
+    } else {
+      return { x: 0, y: 0 }
+     }
+  }
 })
+
 
 export default router
