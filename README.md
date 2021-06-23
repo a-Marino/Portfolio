@@ -1,5 +1,10 @@
 # Porfolio
 
+Hello.  
+Im Andres Marino and this is my portfolio.  
+I made it with Vue and its my first project with this framework.  
+Hope you like it.    
+ 
 ## Project setup
 ```
 npm install
