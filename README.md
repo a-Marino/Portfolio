@@ -6,7 +6,7 @@ I made it with Vue and its my first project with this framework.
 Hope you like it.   
 
 ### Live Demo
-https://portfolio-andres-marino.web.app/
+https://portfolio-andres-marino.web.app/  
 Deployed with Firebase
  
 ## Project setup
