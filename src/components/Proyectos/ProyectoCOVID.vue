@@ -9,12 +9,14 @@
 				</p>
 				<h3>Problematica</h3>
 				<p class="p-6">
-					La Secretaría de Salud de la municipalidad de Coronel Suarez desea procesar información para llevar cierto control sobre los ciudadanos del partido que recibieron las dos dosis de alguna vacuna para el COVID.
+					La Secretaría de Salud desea procesar información para llevar cierto control sobre los ciudadanos del partido que recibieron las dos dosis de alguna vacuna para el COVID.
 				</p>
 				<h3>Solucion</h3>
 				<p class="p-6">
-					Se desarrollará una aplicación web para solucionar la problemática del cliente con el requerimiento de su parte de utilizar el patrón MVC, acordando con el cliente la utilización del framework <span class="amarillo">Laravel</span>. <br><br>
-					<a href='https://github.com/a-Marino/Proyecto-1-Desarrollo-de-Apps-2-Laravel' class="amarillo" target="_blank">https://github.com/a-Marino/Proyecto-1-Desarrollo-de-Apps-2-Laravel</a>
+					Se desarrollará una aplicación web para solucionar la problemática del cliente con el requerimiento de su parte de utilizar el patrón MVC, y utilizando <a href="https://laravel.com/" target='blank' class="agua">Laravel</a>. <br><br>
+					<a href='https://github.com/a-Marino/Proyecto-1-Desarrollo-de-Apps-2-Laravel' class="verde" target="blank">https://github.com/a-Marino/Proyecto-1-Desarrollo-de-Apps-2-Laravel</a>
+					<br>
+					<a href="https://covid19-cnelsuarez.herokuapp.com/" class="verde" target="blank">https://covid19-cnelsuarez.herokuapp.com/</a>
 				</p>
 			</div>
 			<div>
@@ -23,7 +25,7 @@
 				</video>
 				<div class="flex justify-center lg:flex-row md:flex-row flex-col lg:space-y-0
 				md:space-y-0 space-y-3 lg:space-x-7 md:space-x-5 lg:text-lg md:text-lg text-base mt-4">
-					<a href="https://campusvirtual.upso.edu.ar/pluginfile.php/288240/mod_resource/content/3/Proyecto1%20COMISION%201.pdf" target="_blank" class="btn">Enunciado</a>
+					<a href="https://docdro.id/X23Zgp6" target="_blank" class="btn">Enunciado</a>
 					<a href="https://docdro.id/7eCVAZG" target="_blank" class="btn">Documentacion</a>
 				</div>
 			</div>
@@ -44,8 +46,6 @@
 	}
 
 	h1 {
-		color: var(--amarillo);
-		overflow-y: hidden;
 		/* Tailwind clases  */
 		@apply text-3xl lg:text-6xl;
 	}
@@ -58,17 +58,18 @@
 	}
 
 	h3 {
-		color: var(--gris-texto);
+		font-weight: 500;
 		@apply text-xl lg:text-3xl;
+		color: var(--gris-texto)
 	}
 
 	p {
-		color: rgb(190,190,190);
-		@apply text-lg
+		@apply text-lg;
 	}
 
 	.gris {
-		color: rgba(128,128,128,0.5);
+		font-weight: 600;
+		color: #504945;
 	}
 
 	.amarillo {
@@ -80,6 +81,7 @@
 		padding: 10px;
 		border: 2px solid var(--amarillo);
 		transition: .2s ease-in;
+		font-weight: 600;
 	}
 
 	.btn:hover {

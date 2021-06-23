@@ -1,46 +1,68 @@
 <template>
 	<div class="about min-h-full"  v-scrollanimation>
-		<h1 class="text-3xl text-center mb-5 overflow-hidden">Sobre Mi</h1>
+		<h1 class="text-5xl text-center mb-5 overflow-hidden">Sobre Mi</h1>
 		<button class="block mx-auto lg:mb-24 btn text-sm" @click='changeLanguage' id="btnIdioma">English</button>
 		<div class="flex justify-center min-w-screen lg:flex-row md:flex-row flex-col mx-auto lg:space-x-10 sm:space-x-0">
 			<div class="lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10" id="spanish">
 				<p>
-					<span class="text-xl font-semibold tracking-wide amarillo">Hola.</span> <br>
+					<span class="azul">&lt;</span><span class="agua">p</span><span class="mr-3 azul">&gt;</span>
+					<span class="text-xl font-semibold tracking-wide violeta">Hola.</span>
 					Soy Andrés Marino. Tengo 20 años, y vivo en la ciudad de Coronel Suarez, Provincia de Buenos Aires, Argentina.
+					<span class="azul">&lt;</span><span class="agua">/p</span><span class="mr-3 azul">&gt;</span>
 				</p>
 				<p>
-					En este momento estoy cursando el tercer y ultimo año de la Tecnicatura Diseño de Aplicaciones Web, en la Universidad <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold fuente-source">UPSO</a>. <br>
+					<span class="azul">&lt;</span><span class="agua">p</span><span class="azul">&gt;</span>
+					En este momento estoy cursando el tercer y ultimo año de la Tecnicatura Diseño de Aplicaciones Web, en la Universidad <a href="https://www.upso.edu.ar/" target="_blank" class="text-lg font-semibold fuente-source violeta">UPSO</a>.
+					<span class="azul">&lt;</span><span class="agua">/p</span><span class="azul mr-3">&gt;</span>
 				</p>
 				<p>
-					<span class="amarillo text-lg font-semibold">Conocimientos:</span> <br>
+					<span class="text-lg rojo">let</span><span class="agua"> = </span><span class="azul">conocimientos</span><span class="gris-alter">;</span><br>
+					<span class="azul">conocimientos</span><span class="agua"> = </span>
+					[
 					<ul>
-						<li>HTML y CSS</li>
-						<li>Bootstrap y TailwindCSS</li>
-						<li>PHP y Laravel</li>
-						<li>JavaScript y VueJS</li>
-						<li>PosgresSQL y phpMyAdmin</li>
+						<li>HTML,</li>
+						<li>CSS,</li>
+						<li>Bootstrap,</li>
+						<li>TailwindCSS,</li>
+						<li>PHP,</li>
+						<li>Laravel,</li>
+						<li>JavaScript,</li>
+						<li>PosgresSQL,</li>
+						<li>phpMyAdmin,</li>
 						<li>Ingles</li>
 					</ul>
+					]<span class="gris-alter">;</span>
 				</p>
 			</div>
 			<div class="oculto-2 lg:w-1/4 md:w-1/4 w-full space-y-5 text-center lg:p-0 md:p-0 p-10" id="english">
 				<p>
-					<span class="text-xl font-semibold tracking-wide amarillo">Hi.</span> <br>
+					<span class="azul">&lt;</span><span class="agua">p</span><span class="mr-3 azul">&gt;</span>
+					<span class="text-xl font-semibold tracking-wide violeta">Hi.</span>
 					Im Andrés Marino. I am 20 years old, i live in Coronel Suarez, Province of Buenos Aires, Argentina.
+					<span class="azul">&lt;</span><span class="agua">/p</span><span class="mr-3 azul">&gt;</span>
 				</p>
 				<p>
-					At the moment i am studying the third and last year of Technical degree in Web Application Design, in <a href="https://www.upso.edu.ar/" target="_blank" class="amarillo text-lg font-semibold fuente-source">UPSO</a> University. <br>
+					<span class="azul">&lt;</span><span class="agua">p</span><span class="azul">&gt;</span>
+					At the moment i am studying the third and last year of Technical degree in Web Application Design, in <a href="https://www.upso.edu.ar/" target="_blank" class="text-lg font-semibold fuente-source violeta">UPSO</a> University.
+					<span class="azul">&lt;</span><span class="agua">/p</span><span class="azul mr-3">&gt;</span>
 				</p>
 				<p>
-					<span class="amarillo text-lg font-semibold">Knowledge:</span> <br>
+					<span class="text-lg rojo">let</span><span class="agua"> = </span><span class="azul">knowledge</span><span class="gris-alter">;</span><br>
+					<span class="azul">knowledge</span><span class="agua"> = </span>
+					[
 					<ul>
-						<li>HTML y CSS</li>
-						<li>Bootstrap y TailwindCSS</li>
-						<li>PHP y Laravel</li>
-						<li>JavaScript y VueJS</li>
-						<li>PosgresSQL y phpMyAdmin</li>
-						<li>English</li>
+						<li>HTML,</li>
+						<li>CSS,</li>
+						<li>Bootstrap,</li>
+						<li>TailwindCSS,</li>
+						<li>PHP,</li>
+						<li>Laravel,</li>
+						<li>JavaScript,</li>
+						<li>PosgresSQL,</li>
+						<li>phpMyAdmin,</li>
+						<li>Ingles</li>
 					</ul>
+					]<span class="gris-alter">;</span>
 				</p>
 			</div>
 			<div>
@@ -54,20 +76,20 @@
 export default {
     name: 'About',
     methods: {
-    	changeLanguage: function() {
-    		const divSpanish = document.querySelector('#spanish');
-    		const divEnglish = document.querySelector('#english');
-    		const btnIdioma = document.querySelector('#btnIdioma');
+		changeLanguage: function() {
+			const divSpanish = document.querySelector('#spanish');
+			const divEnglish = document.querySelector('#english');
+			const btnIdioma = document.querySelector('#btnIdioma');
 
-    		divSpanish.classList.toggle('oculto-2');
-    		divEnglish.classList.toggle('oculto-2');
+			divSpanish.classList.toggle('oculto-2');
+			divEnglish.classList.toggle('oculto-2');
 
-    		if (divSpanish.classList.contains('oculto-2')) {
-    			btnIdioma.innerHTML = 'Spanish';
-    		} else if (divEnglish.classList.contains('oculto-2')) {
-    			btnIdioma.innerHTML = 'Ingles';
-    		}
-    	}
+			if (divSpanish.classList.contains('oculto-2')) {
+				btnIdioma.innerHTML = 'Spanish';
+			} else if (divEnglish.classList.contains('oculto-2')) {
+				btnIdioma.innerHTML = 'Ingles'; 
+			}
+		}
     }
 }
 </script>
@@ -106,7 +128,7 @@ export default {
 	}
 
 	h1 {
-		color: var(--amarillo);
+		color: var(--verde);
 	}
 
 	.cara {

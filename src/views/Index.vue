@@ -1,7 +1,7 @@
 <template>
     <div>
         <Nav/>
-        <Logo/>
+        <Logo id="logo"/>
         <!-- ID is for scroll-to !-->
         <About id='about'/>
         <Contact id='contact'/>
@@ -23,13 +23,13 @@ export default {
         Logo,
         About,
         Contact,
-        Redes
+        Redes,
     },
 }
 </script>
 
 <style scoped>
     *{
-        background-color: #0C0B09;
+        background-color: var(--gris-fondo);
     }
 </style>

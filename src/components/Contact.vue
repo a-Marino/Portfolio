@@ -1,6 +1,6 @@
 <template>
 	<div class="contact min-h-full mb-32" v-scrollanimation>
-		<h1 class="text-5xl text-center mt-40 amarillo">Contactame</h1>
+		<h1 class="text-5xl text-center mt-40">Contactame</h1>
 		<p class="email text-center mt-4">andresmarino.contacto@gmail.com</p>
 		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail" autocomplete="off">
 			<div class="space-x-4">
@@ -28,44 +28,44 @@ import emailjs from 'emailjs-com'
 export default {
     name: 'Contact',
     data() {
-    	return {
-    		name: '',
-    		email: '',
-    		message: '',
-    	}
+		return {
+			name: '',
+			email: '',
+			message: '',
+		}
     },
     methods: {
-    	sendEmail(e) {
-    		try {
-    			// Service ID - Template ID - User ID
-    			emailjs.sendForm('service_xdl5dyd', 'template_5enry9j', e.target, 'user_nT1iOdL42gmrzj1lnYOKP',
-    			{
-    				name: this.name,
-    				email: this.email,
-    				message: this.message,
-    			})
-    		} catch(error) {
-    			console.log({error});
-    		}
-    		let divMsg = document.querySelector('#divMsg')
-    		let btnSubmit = document.querySelector('#btnSubmit')
-    		// Funcion para mostrar el DIV
-    		const quitarClase = () => {
-    			divMsg.classList.remove('oculto');
-    		}
-    		// Funcion para ocultar el DIV
-    		const agregarClase = () => {
-    			divMsg.classList.add('oculto');
-    		}
-    		// Muestra el DIV
-    		quitarClase();
-    		// Lo oculta en 7 segundos
-    		setTimeout(agregarClase, 10000);
-    		// Resetar campos
-    		this.name = ''
-    		this.email = ''
-    		this.message = ''
-    	},
+		sendEmail(e) {
+			try {
+				// Service ID - Template ID - User ID
+				emailjs.sendForm('service_xdl5dyd', 'template_5enry9j', e.target, 'user_nT1iOdL42gmrzj1lnYOKP',
+				{
+					name: this.name,
+					email: this.email,
+					message: this.message,
+				})
+			} catch(error) {
+				console.log({error});
+			}
+			let divMsg = document.querySelector('#divMsg')
+			//let btnSubmit = document.querySelector('#btnSubmit')
+			// Funcion para mostrar el DIV
+			const quitarClase = () => {
+				divMsg.classList.remove('oculto');
+			}
+			// Funcion para ocultar el DIV
+			const agregarClase = () => {
+				divMsg.classList.add('oculto');
+			}
+			// Muestra el DIV
+			quitarClase();
+			// Lo oculta en 7 segundos
+			setTimeout(agregarClase, 10000);
+			// Resetar campos
+			this.name = ''
+			this.email = ''
+			this.message = ''
+		},
     }
 }
 </script>
@@ -92,6 +92,7 @@ export default {
 
 	h1 {
 		overflow: hidden;
+		color: var(--verde)
 	}
 
 	input, textarea {
@@ -101,22 +102,27 @@ export default {
 		color: var(--gris-texto);
 		transition: .2s;
 		background-color: transparent;
-		border-bottom: 3px solid rgba(128,128,128,0.5);
+		border-bottom: 3px solid var(--amarillo);
 		resize: none;
 		overflow: hidden;
+		font-weight: bold;
 	}
 
 	input:focus, textarea:focus {
-		border-bottom: 3px solid var(--amarillo);
+		border-bottom: 3px solid var(--naranja);
 		transition: .2s;
-		color: var(--amarillo);
+		color: var(--gris-texto);
 		transform: scale(1.01);
 	}
 
 	input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-		color: rgba(128,128,128,0.5);
+		color: var(--gris-alternativo);
 		padding: 10px;
 		transition: .2s;
+	}
+
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+		color: var(--gris-texto);
 	}
 
 	input[type=submit] {
@@ -131,7 +137,7 @@ export default {
 	input[type=submit]:hover {
 		transform: scale(1.1);
 		background-color: var(--amarillo);
-		color: black;
+		color: var(--gris-fondo);
 		transition: .2s;
 	}
 
@@ -140,8 +146,9 @@ export default {
 	}
 
 	.email{
-		color: rgba(128,128,128,0.5);
+		color: var(--gris-alternativo);
 		cursor: default;
+		font-weight: 600;
 	}
 
 	/* scrollAnimation Directive classes */

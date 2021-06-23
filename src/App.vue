@@ -17,27 +17,67 @@ export default {
 /* Variables de colores */
 :root {
   --amarillo: #DBB62E;
-  --gris-fondo: #0C0B09;
-  --gris-texto: #808080;
+  --gris-fondo: #1d2021;
+  --gris-texto: #eddbb2;
+  --verde: #b8bb26;
+  --rojo: #cc241d;
+  --agua: #689d6a;
+  --violeta: #b16286;
+  --naranja: #fe8019;
+  --azul: #458588;
+  --gris-alternativo: #928374;
+}
+
+.verde {
+  color: var(--verde);
+}
+
+.rojo {
+  color: var(--rojo);
+}
+
+.agua {
+  color: var(--agua);
+}
+
+.azul {
+  color: var(--azul);
+}
+
+.violeta {
+  color: var(--violeta);
+}
+
+.naranja {
+  color: var(--naranja);
+}
+
+.gris-alter {
+  color: var(--gris-alternativo);
 }
 
 * {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  box-sizing: border-box;
   font-family: 'Gruppo', cursive;
-  font-weight: bold;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: var(--gris-fondo);
-  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 h1 {
   font-family: 'Bungee', cursive;
+  color: var(--verde);
+}
+
+p {
+  color: var(--gris-texto);
 }
 
 body::-webkit-scrollbar {
@@ -49,6 +89,6 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--amarillo);    
+  background-color: var(--gris-alternativo);  
 }
 </style>

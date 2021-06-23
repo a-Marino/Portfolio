@@ -1,5 +1,8 @@
 <template>	
-	<div class="redes lg:float-right md:float-right flex justify-center"  v-scrollanimation>
+	<div class="redes lg:float-right md:float-right md:flex-row flex-col flex justify-center items-center"  v-scrollanimation>
+		<p class="md:self-center md:order-first order-last">
+			Theme inspired by GruvBox
+		</p>
         <div class="flex space-x-4 p-4">
             <router-link to='/instagram' class="red-social">
                 <img src="@/assets/images/instagram.png" class="w-8">
@@ -22,14 +25,14 @@ export default {
 
 <style scoped>
 	.red-social {
-	  opacity: 0.5;
-	  transition: .1s;
+		opacity: 0.5;
+		transition: .1s;
 	}
 
 	.red-social:hover {
-	  opacity: 1;
-	  transform: scale(1.1);
-	  transition: .1s;
+		opacity: 1;
+		transform: scale(1.1);
+		transition: .1s;
 	}
 
 	/* scrollAnimation Directive classes */
