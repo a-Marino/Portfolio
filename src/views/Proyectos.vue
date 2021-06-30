@@ -15,6 +15,9 @@
 				<div class="p-16">
 					<h1 class="lg:text-left md:text-left text-center">Proyectos</h1>
 					<ol class="lg:p-20 md:p-16 lg:mt-0 md:mt-0 mt-7">
+						<a v-scroll-to="'#photoAcCars'">
+							<li>Photoaccars</li>
+						</a>
 						<a v-scroll-to="'#covid'">
 							<li>Proyecto COVID-19</li>
 						</a>
@@ -22,29 +25,24 @@
 				</div>
 			</div>
 		</div>
+		<section id="photoAcCars">
+			<photoAcCars/>
+		</section>
 		<section id="covid">
 			<ProyectoCOVID/>
 		</section>
-		<!-- <section>
-			<div class="p-10">
-				<h2>Page 2</h2>
-			</div>
-		</section>
-		<section>
-			<div class="p-10">
-				<h2>Page 3</h2>
-			</div>
-		</section> -->
 	</div>
 </template>
 
 <script>
 	import ProyectoCOVID from '@/components/Proyectos/ProyectoCOVID.vue'
+	import photoAcCars from '@/components/Proyectos/PhotoAcCars.vue'
 
 	export default {
 		name: 'Proyectos',
 		components: {
 			ProyectoCOVID,
+			photoAcCars,
 		}
 	}
 </script>
@@ -101,5 +99,12 @@
 		overflow-y: hidden;
 		/* Tailwind clases  */
 		@apply text-3xl lg:text-6xl;
+	}
+
+	@media (min-width: 768px) { 
+		section {
+			width: 100%;
+			height: 100%;
+		}
 	}
 </style>
