@@ -20,7 +20,7 @@
                 <img src="@/assets/images/bars-solid.png" alt="bars" class="w-8 m-3 bars"/>
             </button>
             <div class="flex flex-col hidden pb-5 dropdown">
-                <a href="/proyectos" class="link pl-5">
+                <a href="/proyectos" class="link-mov pl-5">
                     Proyectos
                 </a>
             </div>
@@ -71,6 +71,16 @@ export default {
         font-family: 'Gruppo', cursive;
         font-weight: bold;
     }
+
+    .link-mov {
+        color: var(--gris-texto);
+        font-size: 20px;
+        transition: .2s;
+        margin-top: 15px;
+        font-family: 'Gruppo', cursive;
+        font-weight: bold;
+    }
+
 
     /*.index {
         transform: scale(1.3);

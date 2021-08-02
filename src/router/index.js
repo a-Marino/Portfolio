@@ -23,6 +23,10 @@ const routes = [
   {
     path: '/linkedin',
     beforeEnter() {window.open('https://www.linkedin.com/in/andr%C3%A9s-marino-16ab14202/', '_blank')}
+  },
+  {
+    path: '/redesign',
+    component: () => import('../views/HomeRedesign.vue')
   }
 ]
 

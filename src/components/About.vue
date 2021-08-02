@@ -29,6 +29,7 @@
 						<li>JavaScript,</li>
 						<li>PosgresSQL,</li>
 						<li>phpMyAdmin,</li>
+						<li>Adobe XD</li>
 						<li>Ingles</li>
 					</ul>
 					]<span class="gris-alter">;</span>
@@ -60,7 +61,8 @@
 						<li>JavaScript,</li>
 						<li>PosgresSQL,</li>
 						<li>phpMyAdmin,</li>
-						<li>Ingles</li>
+						<li>Adobe XD</li>
+						<li>English</li>
 					</ul>
 					]<span class="gris-alter">;</span>
 				</p>

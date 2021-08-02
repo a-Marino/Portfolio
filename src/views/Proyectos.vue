@@ -15,6 +15,9 @@
 				<div class="p-16">
 					<h1 class="lg:text-left md:text-left text-center">Proyectos</h1>
 					<ol class="lg:p-20 md:p-16 lg:mt-0 md:mt-0 mt-7">
+						<a v-scroll-to="'#filmsToWatch'">
+							<li>filmsToWatch</li>
+						</a>
 						<a v-scroll-to="'#photoAcCars'">
 							<li>Photoaccars</li>
 						</a>
@@ -25,6 +28,9 @@
 				</div>
 			</div>
 		</div>
+		<section id="filmsToWatch">
+			<filmsToWatch/>
+		</section>
 		<section id="photoAcCars">
 			<photoAcCars/>
 		</section>
@@ -37,12 +43,14 @@
 <script>
 	import ProyectoCOVID from '@/components/Proyectos/ProyectoCOVID.vue'
 	import photoAcCars from '@/components/Proyectos/PhotoAcCars.vue'
+	import filmsToWatch from '@/components/Proyectos/filmsToWatch.vue'
 
 	export default {
 		name: 'Proyectos',
 		components: {
 			ProyectoCOVID,
 			photoAcCars,
+			filmsToWatch
 		}
 	}
 </script>

@@ -16,7 +16,7 @@ export default {
 
 /* Variables de colores */
 :root {
-  --amarillo: #DBB62E;
+  --amarillo: #FFBB00;
   --gris-fondo: #1d2021;
   --gris-texto: #eddbb2;
   --verde: #b8bb26;
@@ -26,6 +26,10 @@ export default {
   --naranja: #fe8019;
   --azul: #458588;
   --gris-alternativo: #928374;
+}
+
+.amarillo {
+  color: var(--amarillo);
 }
 
 .verde {
@@ -60,19 +64,16 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Gruppo', cursive;
 }
 
 body {
   height: 100%;
   width: 100%;
   background-color: var(--gris-fondo);
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
 h1 {
-  font-family: 'Bungee', cursive;
   color: var(--verde);
 }
 
