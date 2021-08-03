@@ -18,46 +18,10 @@ export default {
 :root {
   --amarillo: #FFBB00;
   --gris-fondo: #1d2021;
-  --gris-texto: #eddbb2;
-  --verde: #b8bb26;
-  --rojo: #cc241d;
-  --agua: #689d6a;
-  --violeta: #b16286;
-  --naranja: #fe8019;
-  --azul: #458588;
-  --gris-alternativo: #928374;
 }
 
 .amarillo {
   color: var(--amarillo);
-}
-
-.verde {
-  color: var(--verde);
-}
-
-.rojo {
-  color: var(--rojo);
-}
-
-.agua {
-  color: var(--agua);
-}
-
-.azul {
-  color: var(--azul);
-}
-
-.violeta {
-  color: var(--violeta);
-}
-
-.naranja {
-  color: var(--naranja);
-}
-
-.gris-alter {
-  color: var(--gris-alternativo);
 }
 
 * {
@@ -71,14 +35,6 @@ body {
   width: 100%;
   background-color: var(--gris-fondo);
   overflow-x: hidden;
-}
-
-h1 {
-  color: var(--verde);
-}
-
-p {
-  color: var(--gris-texto);
 }
 
 body::-webkit-scrollbar {

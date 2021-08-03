@@ -6,27 +6,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    component: () => import('../views/Index.vue')
-  },
-  {
-    path: '/proyectos',
-    component: () => import('../views/Proyectos.vue')
-  },
-  {
-    path: '/github',
-    beforeEnter() {window.open('https://github.com/a-Marino', '_blank')}
-  },
-  {
-    path: '/instagram',
-    beforeEnter() {window.open('https://www.instagram.com/andresmarino_/', '_blank')}
-  },
-  {
-    path: '/linkedin',
-    beforeEnter() {window.open('https://www.linkedin.com/in/andr%C3%A9s-marino-16ab14202/', '_blank')}
-  },
-  {
-    path: '/redesign',
-    component: () => import('../views/HomeRedesign.vue')
+    component: () => import('../views/Home.vue')
   }
 ]
 

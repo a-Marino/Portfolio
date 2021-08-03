@@ -1,50 +1,18 @@
-<template>	
-	<div class="redes lg:float-right md:float-right md:flex-row flex-col flex justify-center items-center"  v-scrollanimation>
-		<p class="md:self-center md:order-first order-last">
-			Theme inspired by GruvBox
-		</p>
-        <div class="flex space-x-4 p-4">
-            <router-link to='/instagram' class="red-social">
-                <img src="@/assets/images/instagram.png" class="w-8">
-            </router-link>
-            <router-link to='/github' class="red-social">
-                <img src="@/assets/images/github.png" class="w-8">
-            </router-link>
-            <router-link to='/linkedin' class="red-social">
-                <img src="@/assets/images/linkedin.png" class="w-8">
-            </router-link>
+<template>
+    <div class="fixed right-0 bottom-0">
+        <div class="flex flex-row space-x-4 py-5 px-2">
+            <a href="https://www.linkedin.com/in/andr%C3%A9s-marino-16ab14202/" target="blank">
+                <img src="@/assets/images/linkedin.png" class="redes">
+            </a>
+            <a href="https://github.com/a-Marino" target="blank">
+                <img src="@/assets/images/github.png" class="redes">
+            </a>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Contact',
+    name: 'Redes'
 }
 </script>
-
-<style scoped>
-	.red-social {
-		opacity: 0.5;
-		transition: .1s;
-	}
-
-	.red-social:hover {
-		opacity: 1;
-		transform: scale(1.1);
-		transition: .1s;
-	}
-
-	/* scrollAnimation Directive classes */
-	
-	.before-enter {
-		opacity: 0;
-		transform: translateY(-100px);
-		transition: all 2s ease-out;
-	}
-
-	.enter {
-		opacity: 1;
-		transform: translateY(0px);
-	}
-</style>

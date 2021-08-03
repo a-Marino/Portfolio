@@ -1,21 +1,17 @@
 <template>
-	<div class="contact min-h-full mb-32" v-scrollanimation>
-		<h1 class="text-5xl text-center mt-40">Contactame</h1>
-		<p class="email text-center mt-4">andresmarino.contacto@gmail.com</p>
-		<form class="form flex flex-col space-y-5 my-0" @submit.prevent="sendEmail" autocomplete="off">
-			<div class="space-x-4">
-				<input type="text" v-model="name" name="name" required placeholder="Tu Nombre" class="w-1/4">
-				<input type="email" v-model="email" name="email" required placeholder="Tu Email" class="w-1/4">
+	<div class="md:min-h-screen flex flex-col justify-center items-center md:mt-0 mt-5">
+		<h1 class="amarillo md:text-5xl text-3xl borde-top font-extrabold">CONTACT</h1>
+		<h3 class="mt-2 font-extralight">andresmarino.contacto@gmail.com</h3>
+		<form class="flex flex-col space-y-5 md:mt-10 md:p-0 p-10" @submit.prevent="sendEmail" autocomplete="off">
+			<div class="md:space-x-4 text-center md:space-y-0 space-y-5 w-full">
+				<input type="text" v-model="name" name="name" required placeholder="Tu Nombre" class="input">
+				<input type="email" v-model="email" name="email" required placeholder="Tu Email" class="input">
 			</div>
 			<div>
-				<textarea class="w-1/2" name="message" cols="30" rows="7" v-model="message" required placeholder="Tu Mensaje"></textarea>
+				<textarea name="message" cols="30" rows="7" v-model="message" required placeholder="Tu Mensaje" class="w-full input"></textarea>
 			</div>
-			<div class="flex justify-center flex-row items-center oculto" id="divMsg">
-				<img src="@/assets/images/checked.png" class="w-7 mr-3">
-				<p class="amarillo">Su mensaje ha sido enviado correctamente</p>
-			</div>
-			<div class="divBoton">
-				<input type="submit" value="Enviar" id="btnSubmit">
+			<div class="text-center">
+				<input type="submit" value="SEND" id="btnSubmit" class="sbm-btn">
 			</div>
 		</form>
 	</div>
@@ -47,21 +43,6 @@ export default {
 			} catch(error) {
 				console.log({error});
 			}
-			let divMsg = document.querySelector('#divMsg')
-			//let btnSubmit = document.querySelector('#btnSubmit')
-			// Funcion para mostrar el DIV
-			const quitarClase = () => {
-				divMsg.classList.remove('oculto');
-			}
-			// Funcion para ocultar el DIV
-			const agregarClase = () => {
-				divMsg.classList.add('oculto');
-			}
-			// Muestra el DIV
-			quitarClase();
-			// Lo oculta en 7 segundos
-			setTimeout(agregarClase, 10000);
-			// Resetar campos
 			this.name = ''
 			this.email = ''
 			this.message = ''
@@ -71,98 +52,5 @@ export default {
 </script>
 
 <style scoped>
-	.contact {
-		background-color: transparent;
-	}
-
-	.divBoton {
-		overflow: hidden;
-	}
-
-	.form {
-		text-align: center;
-		margin: auto;
-		margin-top: 60px;
-	}
-
-	.amarillo {
-		color: var(--amarillo);
-		cursor: default;
-	}
-
-	h1 {
-		overflow: hidden;
-		color: var(--verde)
-	}
-
-	input, textarea {
-		margin-top: 5px;
-		padding: 5px;
-		outline: none;
-		color: var(--gris-texto);
-		transition: .2s;
-		background-color: transparent;
-		border-bottom: 3px solid var(--amarillo);
-		resize: none;
-		overflow: hidden;
-		font-weight: bold;
-	}
-
-	input:focus, textarea:focus {
-		border-bottom: 3px solid var(--naranja);
-		transition: .2s;
-		color: var(--gris-texto);
-		transform: scale(1.01);
-	}
-
-	input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-		color: var(--gris-alternativo);
-		padding: 10px;
-		transition: .2s;
-	}
-
-	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-		color: var(--gris-texto);
-	}
-
-	input[type=submit] {
-		padding: 5px 15px;
-		border: 2px solid var(--amarillo);
-		background-color: transparent;
-		cursor: pointer;
-		transition: .2s;
-		color: var(--amarillo);
-	}
-
-	input[type=submit]:hover {
-		transform: scale(1.1);
-		background-color: var(--amarillo);
-		color: var(--gris-fondo);
-		transition: .2s;
-	}
-
-	.oculto {
-		display: none;
-	}
-
-	.email{
-		color: var(--gris-alternativo);
-		cursor: default;
-		font-weight: 600;
-	}
-
-	/* scrollAnimation Directive classes */
-
-	.before-enter {
-		opacity: 0;
-		transform: translateX(-100px);
-		transition: all 2s ease-out;
-		overflow: hidden;
-	}
-
-	.enter {
-		opacity: 1;
-		transform: translateX(0px);
-		overflow: hidden;
-	}
+	
 </style>
