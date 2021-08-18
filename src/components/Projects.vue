@@ -1,5 +1,5 @@
 <template>
-    <div class="md:min-h-screen flex flex-col justify-center items-center md:mt-0 mt-10 md:p-0 p-10">
+    <div class="md:min-h-screen flex flex-col justify-center items-center md:mt-0 mt-10 md:p-0 p-10" id="Projects">
         <h1 class="amarillo md:text-5xl text-3xl font-extrabold borde-top md:mb-0 mb-10">PROJECTS</h1>
         <div class="flex md:flex-row flex-col md:space-x-10 md:p-10 md:space-y-0 space-y-10">
             <div class="flex flex-col space-y-3 relative">

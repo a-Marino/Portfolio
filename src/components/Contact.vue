@@ -1,14 +1,14 @@
 <template>
-	<div class="md:min-h-screen flex flex-col justify-center items-center md:mt-0 mt-5">
+	<div class="md:min-h-screen flex flex-col justify-center items-center md:mt-0 mt-5" id="Contact">
 		<h1 class="amarillo md:text-5xl text-3xl borde-top font-extrabold">CONTACT</h1>
 		<h3 class="mt-2 font-extralight">andresmarino.contacto@gmail.com</h3>
 		<form class="flex flex-col space-y-5 md:mt-10 md:p-0 p-10" @submit.prevent="sendEmail" autocomplete="off">
 			<div class="md:space-x-4 text-center md:space-y-0 space-y-5 w-full">
-				<input type="text" v-model="name" name="name" required placeholder="Tu Nombre" class="input">
-				<input type="email" v-model="email" name="email" required placeholder="Tu Email" class="input">
+				<input type="text" v-model="name" name="name" required placeholder="Your Name" class="input">
+				<input type="email" v-model="email" name="email" required placeholder="Your Email" class="input">
 			</div>
 			<div>
-				<textarea name="message" cols="30" rows="7" v-model="message" required placeholder="Tu Mensaje" class="w-full input"></textarea>
+				<textarea name="message" cols="30" rows="7" v-model="message" required placeholder="Your Message" class="w-full input"></textarea>
 			</div>
 			<div class="text-center">
 				<input type="submit" value="SEND" id="btnSubmit" class="sbm-btn">

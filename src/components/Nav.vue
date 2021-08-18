@@ -3,13 +3,13 @@
         <nav class="hidden md:flex p-3">
             <ul class="flex space-x-4 text-lg">
                 <li>
-                    <router-link to="/redesign">About</router-link> 
+                    <router-link to="/" v-scroll-to="'#About'">About</router-link> 
                 </li>
                 <li>
-                    <router-link to="/redesign">Projects</router-link> 
+                    <router-link to="/" v-scroll-to="'#Projects'">Projects</router-link> 
                 </li>
                 <li>
-                    <router-link to="/redesign">Contact</router-link> 
+                    <router-link to="/" v-scroll-to="'#Contact'">Contact</router-link> 
                 </li>
             </ul>
         </nav>
