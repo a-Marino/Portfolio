@@ -4,7 +4,7 @@
 		<h3 class="mt-2 font-extralight">andresmarino.contacto@gmail.com</h3>
 		<form class="flex flex-col space-y-5 md:mt-10 md:p-0 p-10" @submit.prevent="sendEmail" autocomplete="off">
 			<div class="md:space-x-4 text-center md:space-y-0 space-y-5 w-full">
-				<input type="text" v-model="name" name="name" required placeholder="Your Name" class="input">
+				<input type="text" v-model="name" name="name" required placeholder="Your Name" class="input" pattern="[A-Za-z0-9]{1,25}">
 				<input type="email" v-model="email" name="email" required placeholder="Your Email" class="input">
 			</div>
 			<div>
