@@ -8,11 +8,11 @@
         </div>
         <div class="flex flex-col md:flex-row md:space-x-5 md:space-y-0 md:w-3/4 text-justify md:items-center justify-center ABOUT pb-12 space-y-5">
             <div class="md:w-1/3 p-5 md:p-0" id="EN">
-                <p>Hi. Im <span class="amarillo font-bold">Andrés Marino</span>. Im 21 years old, i live in Coronel Suarez, Buenos Aires, Argentina.</p>
+                <p>Hi. Im <span class="amarillo font-bold">Andrés Marino</span>. Im 22 years old, i live in Coronel Suarez, Buenos Aires, Argentina.</p>
                 <p>I finished the <span class="amarillo font-bold">Technical Degree in Web Applications Design</span> at <span class="amarillo font-bold">UPSO</span> University.</p>
             </div>
             <div class="md:w-1/3 p-5 md:p-0 hidden" id="ES">
-                <p>Hola. Soy <span class="amarillo font-bold">Andrés Marino</span>. Tengo 21 años, Vivo en Coronel Suarez,  Buenos Aires, Argentina.</p>
+                <p>Hola. Soy <span class="amarillo font-bold">Andrés Marino</span>. Tengo 22 años, Vivo en Coronel Suarez,  Buenos Aires, Argentina.</p>
                 <p>Me recibi como <span class="amarillo font-bold">Tecnico en Desarrollo de Aplicaciones Web</span> en la universidad <span class="amarillo font-bold">UPSO</span>.</p>
             </div>
             <div class="md:w-1/2 flex flex-col items-center space-y-5">

@@ -3,16 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service  build",
+    "lint": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service  lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "animate.css": "^4.1.1",
+    "caniuse-lite": "^1.0.30001498",
     "core-js": "^3.6.5",
+    "dotenv": "^16.1.4",
     "emailjs-com": "^2.6.4",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
